@@ -43,9 +43,20 @@
 
   <br/>
 
-  <div>原本是傾向<span class="label label-info"><%= MonsterModel.random() %></span>配<span class="label label-inverse">暗天</span>的 , 因為hp可以到<span class="badge badge-success"><%= Math.floor(Math.random()*10)+20 %>k</span> 很穩.</div>
-  <div>即使只有2倍回 , <span class="label"><%= instance %></span>的傷害壓力根本不算什麼 .</div>
-  <div>每回合<span class="badge badge-success"><%= Math.floor(Math.random()*10000)%></span>傷 , 我拉1串心+<span class="badge badge-important"><%= Math.floor(Math.random()*10)%>c<span class="badge badge-success"> 就可以補<span class="badge badge-success"><%= Math.floor(Math.random()*10)+2%>k</span>, 1心+<span class="badge badge-important"><%= Math.floor(Math.random()*10)+2%>c</span> 就可以有近<span class="badge badge-success"><%= Math.floor(Math.random()*10)+4%>k</span> .</div>
+  <div>原本是傾向
+    <span class="label label-info"><%= MonsterModel.random() %></span>
+    配
+    <span class="label label-inverse">暗天</span>
+    的 , 
+    因為hp可以到<span class="badge badge-success"><%= Math.floor(Math.random()*10)+20 %>k</span> 很穩.
+  </div>
+  
+  <div>即使只有2倍回, 
+    <span class="label"><%= instance %></span>的傷害壓力根本不算什麼 .
+  </div>
+  <div>
+    每回合<span class="badge badge-success"><%= Math.floor(Math.random()*10000)%></span>傷,
+    我拉1串心+<span class="badge badge-important"><%= Math.floor(Math.random()*10)%>c</span>就可以補<span class="badge badge-success"><%= Math.floor(Math.random()*10)+2%>k</span>, 1心+<span class="badge badge-important"><%= Math.floor(Math.random()*10)+2%>c</span> 就可以有近<span class="badge badge-success"><%= Math.floor(Math.random()*10)+4%>k</span> .</div>
   <div>等於我每回合的血量僅減少 1~3k</div>
 
   <br/>
