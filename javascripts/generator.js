@@ -30,7 +30,6 @@
 
     submit: function() {
       var options = $('form').serializeObject();
-      options.instance = '石川';
 
       $('#template').html(new EJS({url: 'lucifer.ejs'}).render(options));
     }
