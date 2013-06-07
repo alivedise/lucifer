@@ -1,118 +1,131 @@
 <h1>Puzzle & Dragons 龍族拼圖 (平民<%= instance %>)</h1>
 <div class="container">
-  大家好，小弟剛玩PAD <%= played %> 日，
-  只要有心有技術，沒有神起手，不靠課金寵也是可以克服不少困難。
-  今天來跟大家分享非常平民的平民隊攻略 <%= instance %> 的心得：
-  首先隊伍組成是：
-  1. 隊長：Lv <%= Math.floor(Math.random()*99) %>的<%= leader %>
-  2. 隊員：滿等虹番，滿等虹番，滿等虹番，技能等級<%= Math.floor(Math.random()*7) %>水奶
-  3. 隊友：滿等+297光暗路西法
+  <div>大家好，小弟剛玩PAD <%= played %> 日，</div>
+  <div>只要有心有技術，沒有神起手，不靠課金寵也是可以克服不少困難。</div>
+  <div>今天來跟大家分享非常平民的平民隊攻略 <%= instance %> 的心得：</div>
+  <div>首先隊伍組成是：</div>
+  <ul>
+    <li>1. 隊長：Lv <%= Math.floor(Math.random()*99) %>的<%= leader %></li>
+    <li>2. 隊員：滿等虹番，滿等虹番，滿等虹番，技能等級<%= Math.floor(Math.random()*7) %>水奶</li>
+    <li>3. 隊友：滿等+297光暗路西法</li>
+  </ul>
 
-  整隊血量加成後約為 <%= Math.floor(Math.random()*10)+20 %>K, 恢復 <%= Math.floor(Math.random()*3)+1 %>K
-  技巧要求 : <%= Math.floor(Math.random()*1)+1 %>c~<%= Math.floor(Math.random()*1)+10 %>c (不含天降)
+  <div>整隊血量加成後約為 <%= Math.floor(Math.random()*10)+20 %>K, 恢復 <%= Math.floor(Math.random()*3)+1 %>K
+  <h3>技巧要求 : <%= Math.floor(Math.random()*1)+1 %>c~<%= Math.floor(Math.random()*1)+10 %>c (不含天降)</h3>
 
-  以下為我的整體戰略.
-  本來是想用<%= MonsterModel.random() %>打的, 但無奈我只有一個雙倍彩胖, 昨天給光埃進化用掉了.
-  所以水玩無法進化到三階 取得水火雙半減.
+  <div>以下為我的整體戰略.</div>
+  <div>本來是想用<%= MonsterModel.random() %>打的, 但無奈我只有一個雙倍彩胖, 昨天給光埃進化用掉了.</div>
+  <div>所以無法進化到三階.</div>
 
-  因此我的隊長人選中, 一直在3個人考慮:
-  1.Lv<%= Math.floor(Math.random()*99+1) %> 1階<%= MonsterModel.random() %> 能力很爛
-  2.Lv<%= Math.floor(Math.random()*99+1) %> 2階<%= MonsterModel.random() %> 能力普普
-  3.Lv<%= Math.floor(Math.random()*99+1) %> 3階<%= MonsterModel.random() %> 能力很強
+  <div>因此我的隊長人選中, 一直在3個人考慮:</div>
+  <ul>
+    <li>1. Lv<%= Math.floor(Math.random()*99+1) %> 1階<%= MonsterModel.random() %> 能力很爛</li>
+    <li>2. Lv<%= Math.floor(Math.random()*99+1) %> 2階<%= MonsterModel.random() %> 能力普普</li>
+    <li>3. Lv<%= Math.floor(Math.random()*99+1) %> 3階<%= MonsterModel.random() %> 能力很強</li>
+  </ul>
 
-  好友考慮
-  1.滿等<%= MonsterModel.random() %>
-  2.滿等暗天
+  <div>好友考慮
+  <ul>
+    <li>1.滿等<%= MonsterModel.random() %></li>
+    <li>2.滿等暗天</li>
+  </ul>
 
-  原本是傾向<%= MonsterModel.random() %>配暗天的 , 因為hp可以到<%= Math.floor(Math.random()*10)+20 %>k 很穩.
-  即使只有2倍回 , <%= instance %>的傷害壓力根本不算什麼 .
-  每回合<%= Math.floor(Math.random()*10000)%>傷 , 我拉1串心+<%= Math.floor(Math.random()*10)%>c 就可以補<%= Math.floor(Math.random()*10)+2%>k, 1心+<%= Math.floor(Math.random()*10)+2%>c 就可以有近<%= Math.floor(Math.random()*10)+20%>c就可以有近<%= Math.floor(Math.random()*10)+4%>k .
-  等於我每回合的血量僅減少 1~3k
+  <div>原本是傾向<%= MonsterModel.random() %>配暗天的 , 因為hp可以到<%= Math.floor(Math.random()*10)+20 %>k 很穩.</div>
+  <div>即使只有2倍回 , <%= instance %>的傷害壓力根本不算什麼 .</div>
+  <div>每回合<%= Math.floor(Math.random()*10000)%>傷 , 我拉1串心+<%= Math.floor(Math.random()*10)%>c 就可以補<%= Math.floor(Math.random()*10)+2%>k, 1心+<%= Math.floor(Math.random()*10)+2%>c 就可以有近<%= Math.floor(Math.random()*10)+20%>c就可以有近<%= Math.floor(Math.random()*10)+4%>k .</div>
+  <div>等於我每回合的血量僅減少 1~3k</div>
 
-  不過問題來了 .
-  第一層的五隻<%= MonsterModel.random() %> , 每隻傷害<%= Math.floor(Math.random()*10)+4%>k, 5隻每回合就是<%= Math.floor(Math.random()*100)+40%>k.
-  防有<%= Math.floor(Math.random()*5000)+2000%>, 血有<%= Math.floor(Math.random()*5000)+5000%>,
-  無法每回合殺死一隻的話 , 大概3~5回合就換我出去 .
+  <div>不過問題來了 .</div>
+  <div>第一層的五隻<%= MonsterModel.random() %> , 每隻傷害<%= Math.floor(Math.random()*10)+4%>k, </div>5隻每回合就是<%= Math.floor(Math.random()*100)+40%>k.</div>
+  <div>防有<%= Math.floor(Math.random()*5000)+2000%>, 血有<%= Math.floor(Math.random()*5000)+5000%>,</div>
+  <div>無法每回合殺死一隻的話 , 大概3~5回合就換我出去 .</div>
 
-  5人合力擊火殺死一隻, 每隻傷害要有<%= Math.floor(Math.random()*5000)+2000%>+
-  但基傷才<%= Math.floor(Math.random()*1000)%>左右的情況下, 只有2串暗珠+5c以上才有辦法達到 .
+  <div>5人合力擊火殺死一隻, 每隻傷害要有<%= Math.floor(Math.random()*5000)+2000%>+</div>
+  <div>但基傷才<%= Math.floor(Math.random()*1000)%>左右的情況下, 只有2串暗珠+5c以上才有辦法達到 .</div>
 
-  但你根本無法保證2回合內可以集到多少暗珠 ,
-  暗珠不夠, 無法破防的話 傷害就等於只有1, 一定死 .
+  <div>但你根本無法保證2回合內可以集到多少暗珠 ,</div>
+  <div>暗珠不夠, 無法破防的話 傷害就等於只有1, 一定死 .</div>
 
-  這個方案打<%= instance %>雖然穩健, 但看不到boss再穩健也是白搭.
-  比較可行的方式只能換搭<%= MonsterModel.random() %>.
-  所以考慮了很久後加上徵不到滿等<%= MonsterModel.random() %>.(我去戰友網徵的 公司不能上PTT qq)
-  所以最後還是放棄 .
+  <div>這個方案打<%= instance %>雖然穩健, 但看不到boss再穩健也是白搭.</div>
+  <div>比較可行的方式只能換搭<%= MonsterModel.random() %>.</div>
+  <div>所以考慮了很久後加上徵不到滿等<%= MonsterModel.random() %>.(我去戰友網徵的 公司不能上PTT qq)</div>
+  <div>所以最後還是放棄 .</div>
 
-  <%= MonsterModel.random() %>.則是因為太吃cost了, 我rank才97.
-  根本塞不下隊員也只好放棄(3虹番+<%= MonsterModel.random() %>.就要<%= Math.floor(Math.random()*100)+100%>cost了!) .
+  <div><%= MonsterModel.random() %>.則是因為太吃cost了, 我rank才97.</div>
+  <div>根本塞不下隊員也只好放棄(3虹番+<%= MonsterModel.random() %>.就要<%= Math.floor(Math.random()*100)+100%>cost了!) .</div>
 
-  <%= MonsterModel.random() %>的半減只有60%, 配暗天沒傷害, 配<%= MonsterModel.random() %>的話Boss傷害會有<%= Math.floor(Math.random()*10000)+15000%>+,
-  我會直接被秒, 也只好放棄 .
+  <div><%= MonsterModel.random() %>的半減只有60%, 配暗天沒傷害, 配<%= MonsterModel.random() %></div>的話Boss傷害會有<%= Math.floor(Math.random()*10000)+15000%>+,</div>
+  <div>我會直接被秒, 也只好放棄 .</div>
 
-  蜀中無大將, 最後只好把隊長的人選交到我從未考慮過的<%= leader %>身上了 .
+  <div>蜀中無大將, 最後只好把隊長的人選交到我從未考慮過的<%= leader %>身上了 .</div>
 
-  因為我第<%= Math.floor(Math.random()*3)+1 %>週時不小心就靠好友暗天就一路殺到天海原了 .
-  之後天天住在天海神(錢多 經驗多 寵物也不錯肥),
-  大概知道我的陽春隊配上滿等的暗天血量約有<%= Math.floor(Math.random()*20000)+25000 %>+ ,
-  回覆大概加成後在<%= Math.floor(Math.random()*1000)+1500 %>.
+  <div>因為我第<%= Math.floor(Math.random()*3)+1 %>週時不小心就靠好友暗天就一路殺到天海原了 .</div>
+  <div>之後天天住在天海神(錢多 經驗多 寵物也不錯肥),</div>
+  <div>大概知道我的陽春隊配上滿等的暗天血量約有<%= Math.floor(Math.random()*20000)+25000 %>+ ,</div>
+  <div>回覆大概加成後在<%= Math.floor(Math.random()*1000)+1500 %>.</div>
 
-  所以原先用<%= MonsterModel.random() %>的計畫還是可行, 只是打<%= instance %>時血量要控很準 .
-  每回合拉完血後, 血量至少都要保持在<%= Math.floor(Math.random()*1000)%>以上 .
+  <div>所以原先用<%= MonsterModel.random() %>的計畫還是可行, 只是打<%= instance %>時血量要控很準 .</div>
+  <div>每回合拉完血後, 血量至少都要保持在<%= Math.floor(Math.random()*1000)%>以上 .</div>
 
-  下次降臨不知道是何時, 打輸又不會吃虧, 就打算拼這麼一次 .
+  <div>下次降臨不知道是何時, 打輸又不會吃虧, 就打算拼這麼一次 .</div>
 
-  以下為戰鬥細節文字敘述 .
+  <div>以下為戰鬥細節文字敘述 .</div>
 
-  <第一層>
-  我開場運氣很好, 盤面有3顆暗珠,
-  所以拉了一個<%= Math.floor(Math.random()*7)+7 %>c後秒掉第一隻<%= MonsterModel.random() %> .
-  之後依序將一隻隻秒掉, 留下最後一支儲珠儲技.
+  <div class="container">
+    <h2>第一層</h2>
+    <div>我開場運氣很好, 盤面有3顆暗珠,</div>
+    <div>所以拉了一個<%= Math.floor(Math.random()*7)+7 %>c後秒掉第一隻<%= MonsterModel.random() %> .</div>
+    <div>之後依序將一隻隻秒掉, 留下最後一支儲珠儲技.</div>
 
-  這時後發生一個很尷尬的事情, 我珠有儲到, 但技沒存到.
-  所以失手殺死最後一隻<%= MonsterModel.random() %> .
+    <br/>
 
-  <第二層>
-  <第三層>
-  之後只好硬著頭皮用儲下來的珠秒掉場上的小兵 .
-  (<%= Math.floor(Math.random()*7)+7 %>次全體攻擊 + other combo )
+    <div>這時後發生一個很尷尬的事情, 我珠有儲到, 但技沒存到.</div>
+    <div>所以失手殺死最後一隻<%= MonsterModel.random() %> .</div>
+  </div>
 
-  我打到<%= MonsterModel.random() %>時, 虹番跟路西法的技能CD都還有十幾回合... Orz
+  <div class="container">
+    <h2>第二層</h2>
+    <h2>第三層</h2>
+    <div>之後只好硬著頭皮用儲下來的珠秒掉場上的小兵 .</div>
+    <div>(<%= Math.floor(Math.random()*7)+7 %>次全體攻擊 + other combo )</div>
 
-  所以我整個<第四層>是沒放技能打完的.
-  因為中間技能存好時, 我不敢放, 怕進石川前來不及存好下一次.
+    <div>我打到<%= MonsterModel.random() %>時, 虹番跟路西法的技能CD都還有十幾回合... Orz</div>
 
-  沒連擊5000, 有連擊8000, 一串心+<%= Math.floor(Math.random()*7)+7 %>c就拉滿了,
-  所以我水奶只開過一次就打趴它了.
+    <div>所以我整個第四層是沒放技能打完的.</div>
+    <div>因為中間技能存好時, 我不敢放, 怕進石川前來不及存好下一次.</div>
 
-  <第五層>
-  節奏就快很多 .
-  我第一回合是開虹番檔 ,
-  第二回合重力+大砲直接先打掉50% .
+    <div>沒連擊5000, 有連擊8000, 一串心+<%= Math.floor(Math.random()*7)+7 %>c就拉滿了,</div>
+    <div>所以我水奶只開過一次就打趴它了.</div>
+  </div>
 
-  之後就硬了, Boss防有<%= Math.floor(Math.random()*3000) %>, 我一串暗珠+<%= Math.floor(Math.random()*5)+5 %>c 等於一個人才打<%= Math.floor(Math.random()*2000) %>左右.
-  所以我打定主意, 防守為主 .
-  存兩串暗珠才進攻一次, 其餘時間就是消珠+拼combo拉血 .
-  這樣傷害不但多一倍, 防守也只要計算一次, 節奏快非常多 .
+  <div class="container">
+    <h2>第五層</h2>
+    <div>節奏就快很多 .</div>
+    <div>我第一回合是開虹番檔 ,</div>
+    <div>第二回合重力+大砲直接先打掉50% .</div>
 
-  我不記得大概打了幾回合, 斷珠時或拉不回時開虹番
-  只記得虹番各開1次 , 就進入斬殺了 .
+    <div>之後就硬了, Boss防有<%= Math.floor(Math.random()*3000) %>, 我一串暗珠+<%= Math.floor(Math.random()*5)+5 %>c 等於一個人才打<%= Math.floor(Math.random()*2000) %>左右.</div>
+    <div>所以我打定主意, 防守為主 .</div>
+    <div>存兩串暗珠才進攻一次, 其餘時間就是消珠+拼combo拉血 .</div>
+    <div>這樣傷害不但多一倍, 防守也只要計算一次, 節奏快非常多 .</div>
 
-  斬殺時已經存好重力跟大砲, 所以我先丟重力然後計算了一下%,
-  我等水奶技好後,
-  丟大砲, 開虹番, 拉滿血 .
-  然後全力進攻, 在虹番減傷的最後一回合開<%= MonsterModel.random() %>梭哈收工(不拉血)
+    <div>我不記得大概打了幾回合, 斷珠時或拉不回時開虹番</div>
+    <div>只記得虹番各開1次 , 就進入斬殺了 .</div>
 
-  整場戰鬥下來是有驚無險(因為進<第四關>時 竟然技還沒好!!!!!!!!!!!!!!!!!!!!!!!).
-  策略上因為事前就沙盤推演過, 所以不覺得太吃力.
-  大概<%= Math.floor(Math.random()*5)+1 %>小時就打完了.
+    <div>斬殺時已經存好重力跟大砲, 所以我先丟重力然後計算了一下%,</div>
+    <div>我等水奶技好後,</div>
+    <div>丟大砲, 開虹番, 拉滿血 .</div>
+    <div>然後全力進攻, 在虹番減傷的最後一回合開<%= MonsterModel.random() %>梭哈收工(不拉血)</div>
 
-  如果你有究極進化後的<%= MonsterModel.random() %>或<%= MonsterModel.random() %>等,
-  那技巧難度會只需要一半(3-4c),
-  我是因為2倍回才需要這樣配套.
-  4倍回的話, 怎麼拉都會滿血吧...
+    <div>整場戰鬥下來是有驚無險(因為進第四關時 竟然技還沒好!!!!!!!!!!!!!!!!!!!!!!!).</div>
+    <div>策略上因為事前就沙盤推演過, 所以不覺得太吃力.</div>
+    <div>大概<%= Math.floor(Math.random()*5)+1 %>小時就打完了.</div>
 
-  希望這篇文章可以對還未攻克 <%= instance %>的新手玩家有幫助!!!
+    <div>如果你有究極進化後的<%= MonsterModel.random() %>或<%= MonsterModel.random() %>等,</div>
+    <div>那技巧難度會只需要一半(3-4c),</div>
+    <div>我是因為2倍回才需要這樣配套.</div>
+    <div>4倍回的話, 怎麼拉都會滿血吧...</div>
 
+    <div>希望這篇文章可以對還未攻克 <%= instance %>的新手玩家有幫助!!!</div>
+  </div>
 </div>
