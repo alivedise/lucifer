@@ -3,6 +3,9 @@ var MonsterModel = {
 		var no = Math.floor(Math.random()*714) + 1;
 		return this['' + no].split('-')[1];
 	},
+	get: function(no) {
+		return this['' + no].split('-')[1];
+	},
 	"1": "ティラ-提拉" ,
 	"2": "ティラン-提拉恩" ,
 	"3": "ティラノス-提拉諾斯" ,
